@@ -30,12 +30,13 @@ public class ChromeDriverTest {
 
     @Before
     public void prepare() {
-        //setup chromedriver
-        System.setProperty(
-                "webdriver.chrome.driver",
-                "webdriver/chromedriver");
+        // setup chromedriver
+       // System.setProperty(
+       //         "webdriver.chrome.driver",
+       //        "webdriver/chromedriver.exe");
 
         testUrl = "https://leftstick.github.io/";
+		System.setProperty("webdriver.chrome.driver", "webdriver/chromedriver.exe");
 
         // Create a new instance of the Chrome driver
         // Notice that the remainder of the code relies on the interface,
@@ -73,7 +74,8 @@ public class ChromeDriverTest {
 
     }
 
-    @After
+   
+	@After
     public void teardown() throws IOException {
         driver.quit();
     }
